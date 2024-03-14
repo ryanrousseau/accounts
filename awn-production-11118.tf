@@ -1,7 +1,7 @@
-resource "octopusdeploy_tenant" "awn-deploy-11111" {
-  name                  = "awn-deploy-11111"
+resource "octopusdeploy_tenant" "awn-production-11118" {
+  name                  = "awn-production-11118"
   space_id              = "Spaces-688"
-  tenant_tags           = ["Release Ring/Alpha", "Tenant Type/Account", "Rancher Token/Octopus Deploy token"]
+  tenant_tags           = ["Release Ring/Beta", "Tenant Type/Account", "Rancher Token/Octopus Deploy token"]
 
   project_environment {
     environments = [ data.octopusdeploy_environments.production.environments[0].id ]

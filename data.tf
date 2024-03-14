@@ -14,6 +14,11 @@ data "octopusdeploy_projects" "all_octopub" {
   name         = "All Octopub"
 }
 
+data "octopusdeploy_projects" "app_a" {
+  name         = "App A"
+}
+
+
 data "octopusdeploy_projects" "mysql" {
   name         = "MySQL"
 }
