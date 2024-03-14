@@ -1,5 +1,5 @@
-resource "octopusdeploy_tenant" "awn-dev-12345" {
-  name                  = "awn-dev-12345"
+resource "octopusdeploy_tenant" "awn-deploy-11111" {
+  name                  = "awn-deploy-11111"
   space_id              = "Spaces-688"
   tenant_tags           = ["Release Ring/Alpha", "Tenant Type/Account"]
 
