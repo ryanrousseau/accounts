@@ -1,6 +1,7 @@
 resource "octopusdeploy_tag_set" "accounts" {
   description = "Accounts"
   name        = "Accounts"
+  sort_order  = 1
 }
 
 resource "octopusdeploy_tag" "awn-dev-1" {
