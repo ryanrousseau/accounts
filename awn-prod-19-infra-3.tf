@@ -8,5 +8,10 @@ resource "octopusdeploy_tenant" "awn-prod-19-infra-3" {
     project_id   = data.octopusdeploy_projects.app_a.projects[0].id
   }
 
+  project_environment {
+    environments = [ data.octopusdeploy_environments.production.environments[0].id ]
+    project_id   = data.octopusdeploy_projects.app_b.projects[0].id
+  }
+
   depends_on = [octopusdeploy_tag.awn-prod-19]
 }
