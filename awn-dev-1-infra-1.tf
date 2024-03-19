@@ -5,6 +5,11 @@ resource "octopusdeploy_tenant" "awn-dev-1-infra-1" {
 
   project_environment {
     environments = [ data.octopusdeploy_environments.development.environments[0].id ]
+    project_id   = data.octopusdeploy_projects.app_template.projects[0].id
+  }
+
+  project_environment {
+    environments = [ data.octopusdeploy_environments.development.environments[0].id ]
     project_id   = data.octopusdeploy_projects.app_a.projects[0].id
   }
 
