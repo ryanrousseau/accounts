@@ -9,3 +9,7 @@ data "octopusdeploy_projects" "app_a" {
 data "octopusdeploy_projects" "app_b" {
   name         = "App B"
 }
+
+data "octopusdeploy_projects" "app_c" {
+  name         = "App C"
+}
