@@ -2097,15 +2097,15 @@ module "awn-prod-12-infra-2" {
   project_environments = [
     {
       project_id = data.octopusdeploy_projects.app_a.projects[0].id
-      environments = [data.octopusdeploy_environments.development.environments[0].id]
+      environments = [data.octopusdeploy_environments.production.environments[0].id]
     },
     {
       project_id = module.app_b.id
-      environments = [data.octopusdeploy_environments.development.environments[0].id]
+      environments = [data.octopusdeploy_environments.production.environments[0].id]
     },
     {
       project_id = module.app_c.id
-      environments = [data.octopusdeploy_environments.development.environments[0].id]
+      environments = [data.octopusdeploy_environments.production.environments[0].id]
     }
   ]
 
@@ -2127,15 +2127,15 @@ module "awn-prod-12-infra-3" {
   project_environments = [
     {
       project_id = data.octopusdeploy_projects.app_a.projects[0].id
-      environments = [data.octopusdeploy_environments.development.environments[0].id]
+      environments = [data.octopusdeploy_environments.production.environments[0].id]
     },
     {
       project_id = module.app_b.id
-      environments = [data.octopusdeploy_environments.development.environments[0].id]
+      environments = [data.octopusdeploy_environments.production.environments[0].id]
     },
     {
       project_id = module.app_c.id
-      environments = [data.octopusdeploy_environments.development.environments[0].id]
+      environments = [data.octopusdeploy_environments.production.environments[0].id]
     }
   ]
 
@@ -2157,15 +2157,15 @@ module "awn-prod-12-infra-4" {
   project_environments = [
     {
       project_id = data.octopusdeploy_projects.app_a.projects[0].id
-      environments = [data.octopusdeploy_environments.development.environments[0].id]
+      environments = [data.octopusdeploy_environments.production.environments[0].id]
     },
     {
       project_id = module.app_b.id
-      environments = [data.octopusdeploy_environments.development.environments[0].id]
+      environments = [data.octopusdeploy_environments.production.environments[0].id]
     },
     {
       project_id = module.app_c.id
-      environments = [data.octopusdeploy_environments.development.environments[0].id]
+      environments = [data.octopusdeploy_environments.production.environments[0].id]
     }
   ]
 
@@ -2187,15 +2187,15 @@ module "awn-prod-12-infra-5" {
   project_environments = [
     {
       project_id = data.octopusdeploy_projects.app_a.projects[0].id
-      environments = [data.octopusdeploy_environments.development.environments[0].id]
+      environments = [data.octopusdeploy_environments.production.environments[0].id]
     },
     {
       project_id = module.app_b.id
-      environments = [data.octopusdeploy_environments.development.environments[0].id]
+      environments = [data.octopusdeploy_environments.production.environments[0].id]
     },
     {
       project_id = module.app_c.id
-      environments = [data.octopusdeploy_environments.development.environments[0].id]
+      environments = [data.octopusdeploy_environments.production.environments[0].id]
     }
   ]
 
