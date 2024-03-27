@@ -26,6 +26,10 @@ module "awn-dev-1-infra-1" {
     {
       project_id = module.app_c.id
       environments = [data.octopusdeploy_environments.development.environments[0].id]
+    },
+    {
+      project_id = module.app_d.id
+      environments = [data.octopusdeploy_environments.development.environments[0].id]
     }
   ]
 
@@ -2059,6 +2063,10 @@ module "awn-prod-12-infra-1" {
     },
     {
       project_id = data.octopusdeploy_projects.app_a.projects[0].id
+      environments = [data.octopusdeploy_environments.production.environments[0].id]
+    },
+    {
+      project_id = module.app_d.id
       environments = [data.octopusdeploy_environments.production.environments[0].id]
     }
   ]
@@ -6889,6 +6897,10 @@ module "awn-test-25-infra-1" {
     },
     {
       project_id = module.app_c.id
+      environments = [data.octopusdeploy_environments.test.environments[0].id]
+    },
+    {
+      project_id = module.app_d.id
       environments = [data.octopusdeploy_environments.test.environments[0].id]
     }
   ]
