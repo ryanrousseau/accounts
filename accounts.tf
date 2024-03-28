@@ -52,10 +52,6 @@ module "awn-dev-2-infra-1" {
     {
       project_id = module.app_b.id
       environments = [data.octopusdeploy_environments.development.environments[0].id]
-    },
-    {
-      project_id = module.app_c.id
-      environments = [data.octopusdeploy_environments.development.environments[0].id]
     }
   ]
 
@@ -81,10 +77,6 @@ module "awn-dev-2-infra-2" {
     },
     {
       project_id = module.app_b.id
-      environments = [data.octopusdeploy_environments.development.environments[0].id]
-    },
-    {
-      project_id = module.app_c.id
       environments = [data.octopusdeploy_environments.development.environments[0].id]
     }
   ]
@@ -112,10 +104,6 @@ module "awn-dev-2-infra-3" {
     {
       project_id = module.app_b.id
       environments = [data.octopusdeploy_environments.development.environments[0].id]
-    },
-    {
-      project_id = module.app_c.id
-      environments = [data.octopusdeploy_environments.development.environments[0].id]
     }
   ]
 
@@ -141,10 +129,6 @@ module "awn-dev-2-infra-4" {
     },
     {
       project_id = module.app_b.id
-      environments = [data.octopusdeploy_environments.development.environments[0].id]
-    },
-    {
-      project_id = module.app_c.id
       environments = [data.octopusdeploy_environments.development.environments[0].id]
     }
   ]
@@ -2101,10 +2085,6 @@ module "awn-prod-12-infra-2" {
     },
     {
       project_id = module.app_b.id
-      environments = [data.octopusdeploy_environments.production.environments[0].id]
-    },
-    {
-      project_id = module.app_c.id
       environments = [data.octopusdeploy_environments.production.environments[0].id]
     }
   ]
