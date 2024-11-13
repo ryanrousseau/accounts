@@ -14,10 +14,3 @@ variable "environment_tag" {
 variable "release_ring_tag" {
     type = string
 }
-
-variable "project_environments" {
-    type = list(object({
-        project_id = string
-        environments = list(string)
-    }))
-}
