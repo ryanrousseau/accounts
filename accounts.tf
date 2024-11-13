@@ -10,13 +10,12 @@ module "awn-dev-1-infra-1" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-dev-1, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-1-infra-1-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-1-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-dev-1, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-1" {
@@ -31,13 +30,12 @@ module "awn-dev-2-infra-1" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-1-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-2" {
@@ -52,13 +50,12 @@ module "awn-dev-2-infra-2" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-2-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-2.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-3" {
@@ -73,13 +70,12 @@ module "awn-dev-2-infra-3" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-3-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-3.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-4" {
@@ -94,13 +90,12 @@ module "awn-dev-2-infra-4" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-4-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-4.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-5" {
@@ -115,13 +110,12 @@ module "awn-dev-2-infra-5" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-5-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-5.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-6" {
@@ -136,13 +130,12 @@ module "awn-dev-2-infra-6" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-6-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-6.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-7" {
@@ -157,13 +150,12 @@ module "awn-dev-2-infra-7" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-7-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-7.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-8" {
@@ -178,13 +170,12 @@ module "awn-dev-2-infra-8" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-8-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-8.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-9" {
@@ -199,13 +190,12 @@ module "awn-dev-2-infra-9" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-9-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-9.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-10" {
@@ -220,13 +210,12 @@ module "awn-dev-2-infra-10" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-10-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-10.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-11" {
@@ -241,13 +230,12 @@ module "awn-dev-2-infra-11" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-11-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-11.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-12" {
@@ -262,13 +250,12 @@ module "awn-dev-2-infra-12" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-12-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-12.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-13" {
@@ -283,13 +270,12 @@ module "awn-dev-2-infra-13" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-13-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-13.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-14" {
@@ -304,13 +290,12 @@ module "awn-dev-2-infra-14" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-14-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-14.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-15" {
@@ -325,13 +310,12 @@ module "awn-dev-2-infra-15" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-15-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-15.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-16" {
@@ -346,13 +330,12 @@ module "awn-dev-2-infra-16" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-16-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-16.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-17" {
@@ -367,13 +350,12 @@ module "awn-dev-2-infra-17" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-17-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-17.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-18" {
@@ -388,13 +370,12 @@ module "awn-dev-2-infra-18" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-18-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-18.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-19" {
@@ -409,13 +390,12 @@ module "awn-dev-2-infra-19" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-19-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-19.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-20" {
@@ -430,13 +410,12 @@ module "awn-dev-2-infra-20" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-20-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-20.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-21" {
@@ -451,13 +430,12 @@ module "awn-dev-2-infra-21" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-21-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-21.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-22" {
@@ -472,13 +450,12 @@ module "awn-dev-2-infra-22" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-22-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-22.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-23" {
@@ -493,13 +470,12 @@ module "awn-dev-2-infra-23" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-23-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-23.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-24" {
@@ -514,13 +490,12 @@ module "awn-dev-2-infra-24" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-24-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-24.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-25" {
@@ -535,13 +510,12 @@ module "awn-dev-2-infra-25" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-25-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-25.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-26" {
@@ -556,13 +530,12 @@ module "awn-dev-2-infra-26" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-26-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-26.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-27" {
@@ -577,13 +550,12 @@ module "awn-dev-2-infra-27" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-27-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-27.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-28" {
@@ -598,13 +570,12 @@ module "awn-dev-2-infra-28" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-28-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-28.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-29" {
@@ -619,13 +590,12 @@ module "awn-dev-2-infra-29" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-29-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-29.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-30" {
@@ -640,13 +610,12 @@ module "awn-dev-2-infra-30" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-30-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-30.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-31" {
@@ -661,13 +630,12 @@ module "awn-dev-2-infra-31" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-31-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-31.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-32" {
@@ -682,13 +650,12 @@ module "awn-dev-2-infra-32" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-32-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-32.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-33" {
@@ -703,13 +670,12 @@ module "awn-dev-2-infra-33" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-33-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-33.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-34" {
@@ -724,13 +690,12 @@ module "awn-dev-2-infra-34" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-34-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-34.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-35" {
@@ -745,13 +710,12 @@ module "awn-dev-2-infra-35" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-35-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-35.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-2-infra-36" {
@@ -766,13 +730,12 @@ module "awn-dev-2-infra-36" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-2-infra-36-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-2-infra-36.id
+  depends_on = [octopusdeploy_tag.awn-dev-2, octopusdeploy_tag.development]
 }
 
 module "awn-dev-3-infra-1" {
@@ -787,13 +750,12 @@ module "awn-dev-3-infra-1" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-3, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-3-infra-1-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-3-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-dev-3, octopusdeploy_tag.development]
 }
 
 module "awn-dev-4-infra-1" {
@@ -808,13 +770,12 @@ module "awn-dev-4-infra-1" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-4, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-4-infra-1-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-4-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-dev-4, octopusdeploy_tag.development]
 }
 
 module "awn-dev-4-infra-2" {
@@ -829,13 +790,12 @@ module "awn-dev-4-infra-2" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-4, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-4-infra-2-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-4-infra-2.id
+  depends_on = [octopusdeploy_tag.awn-dev-4, octopusdeploy_tag.development]
 }
 
 module "awn-dev-4-infra-3" {
@@ -850,13 +810,12 @@ module "awn-dev-4-infra-3" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-4, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-4-infra-3-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-4-infra-3.id
+  depends_on = [octopusdeploy_tag.awn-dev-4, octopusdeploy_tag.development]
 }
 
 module "awn-dev-4-infra-4" {
@@ -871,13 +830,12 @@ module "awn-dev-4-infra-4" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-4, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-4-infra-4-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-4-infra-4.id
+  depends_on = [octopusdeploy_tag.awn-dev-4, octopusdeploy_tag.development]
 }
 
 module "awn-dev-4-infra-5" {
@@ -892,13 +850,12 @@ module "awn-dev-4-infra-5" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-dev-4, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-4-infra-5-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-4-infra-5.id
+  depends_on = [octopusdeploy_tag.awn-dev-4, octopusdeploy_tag.development]
 }
 
 module "awn-dev-5-infra-1" {
@@ -913,13 +870,12 @@ module "awn-dev-5-infra-1" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-5, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-5-infra-1-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-5-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-dev-5, octopusdeploy_tag.development]
 }
 
 module "awn-dev-5-infra-2" {
@@ -934,13 +890,12 @@ module "awn-dev-5-infra-2" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-5, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-5-infra-2-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-5-infra-2.id
+  depends_on = [octopusdeploy_tag.awn-dev-5, octopusdeploy_tag.development]
 }
 
 module "awn-dev-5-infra-3" {
@@ -955,13 +910,12 @@ module "awn-dev-5-infra-3" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-5, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-5-infra-3-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-5-infra-3.id
+  depends_on = [octopusdeploy_tag.awn-dev-5, octopusdeploy_tag.development]
 }
 
 module "awn-dev-5-infra-4" {
@@ -976,13 +930,12 @@ module "awn-dev-5-infra-4" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-5, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-5-infra-4-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-5-infra-4.id
+  depends_on = [octopusdeploy_tag.awn-dev-5, octopusdeploy_tag.development]
 }
 
 module "awn-dev-5-infra-5" {
@@ -997,13 +950,12 @@ module "awn-dev-5-infra-5" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-5, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-5-infra-5-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-5-infra-5.id
+  depends_on = [octopusdeploy_tag.awn-dev-5, octopusdeploy_tag.development]
 }
 
 module "awn-dev-6-infra-1" {
@@ -1018,13 +970,12 @@ module "awn-dev-6-infra-1" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-dev-6, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-6-infra-1-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-6-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-dev-6, octopusdeploy_tag.development]
 }
 
 module "awn-dev-7-infra-1" {
@@ -1039,13 +990,12 @@ module "awn-dev-7-infra-1" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-7-infra-1-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-7-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
 }
 
 module "awn-dev-7-infra-2" {
@@ -1060,13 +1010,12 @@ module "awn-dev-7-infra-2" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-7-infra-2-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-7-infra-2.id
+  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
 }
 
 module "awn-dev-7-infra-3" {
@@ -1081,13 +1030,12 @@ module "awn-dev-7-infra-3" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-7-infra-3-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-7-infra-3.id
+  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
 }
 
 module "awn-dev-7-infra-4" {
@@ -1102,13 +1050,12 @@ module "awn-dev-7-infra-4" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-7-infra-4-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-7-infra-4.id
+  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
 }
 
 module "awn-dev-7-infra-5" {
@@ -1123,13 +1070,12 @@ module "awn-dev-7-infra-5" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-7-infra-5-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-7-infra-5.id
+  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
 }
 
 module "awn-dev-7-infra-6" {
@@ -1144,13 +1090,12 @@ module "awn-dev-7-infra-6" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-7-infra-6-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-7-infra-6.id
+  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
 }
 
 module "awn-dev-7-infra-7" {
@@ -1165,13 +1110,12 @@ module "awn-dev-7-infra-7" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-7-infra-7-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-7-infra-7.id
+  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
 }
 
 module "awn-dev-7-infra-8" {
@@ -1186,13 +1130,12 @@ module "awn-dev-7-infra-8" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-7-infra-8-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-7-infra-8.id
+  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
 }
 
 module "awn-dev-7-infra-9" {
@@ -1207,13 +1150,12 @@ module "awn-dev-7-infra-9" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-7-infra-9-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-7-infra-9.id
+  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
 }
 
 module "awn-dev-7-infra-10" {
@@ -1228,13 +1170,12 @@ module "awn-dev-7-infra-10" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-7-infra-10-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-7-infra-10.id
+  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
 }
 
 module "awn-dev-7-infra-11" {
@@ -1249,13 +1190,12 @@ module "awn-dev-7-infra-11" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-7-infra-11-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-7-infra-11.id
+  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
 }
 
 module "awn-dev-7-infra-12" {
@@ -1270,13 +1210,12 @@ module "awn-dev-7-infra-12" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-7-infra-12-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-7-infra-12.id
+  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
 }
 
 module "awn-dev-7-infra-13" {
@@ -1291,13 +1230,12 @@ module "awn-dev-7-infra-13" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-7-infra-13-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-7-infra-13.id
+  depends_on = [octopusdeploy_tag.awn-dev-7, octopusdeploy_tag.development]
 }
 
 module "awn-dev-8-infra-1" {
@@ -1312,13 +1250,12 @@ module "awn-dev-8-infra-1" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-8, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-8-infra-1-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-8-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-dev-8, octopusdeploy_tag.development]
 }
 
 module "awn-dev-9-infra-1" {
@@ -1333,13 +1270,12 @@ module "awn-dev-9-infra-1" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-9, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-9-infra-1-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-9-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-dev-9, octopusdeploy_tag.development]
 }
 
 module "awn-dev-9-infra-2" {
@@ -1354,13 +1290,12 @@ module "awn-dev-9-infra-2" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-9, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-9-infra-2-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-9-infra-2.id
+  depends_on = [octopusdeploy_tag.awn-dev-9, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-1" {
@@ -1375,13 +1310,12 @@ module "awn-dev-10-infra-1" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-1-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-2" {
@@ -1396,13 +1330,12 @@ module "awn-dev-10-infra-2" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-2-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-2.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-3" {
@@ -1417,13 +1350,12 @@ module "awn-dev-10-infra-3" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-3-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-3.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-4" {
@@ -1438,13 +1370,12 @@ module "awn-dev-10-infra-4" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-4-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-4.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-5" {
@@ -1459,13 +1390,12 @@ module "awn-dev-10-infra-5" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-5-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-5.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-6" {
@@ -1480,13 +1410,12 @@ module "awn-dev-10-infra-6" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-6-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-6.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-7" {
@@ -1501,13 +1430,12 @@ module "awn-dev-10-infra-7" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-7-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-7.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-8" {
@@ -1522,13 +1450,12 @@ module "awn-dev-10-infra-8" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-8-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-8.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-9" {
@@ -1543,13 +1470,12 @@ module "awn-dev-10-infra-9" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-9-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-9.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-10" {
@@ -1564,13 +1490,12 @@ module "awn-dev-10-infra-10" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-10-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-10.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-11" {
@@ -1585,13 +1510,12 @@ module "awn-dev-10-infra-11" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-11-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-11.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-12" {
@@ -1606,13 +1530,12 @@ module "awn-dev-10-infra-12" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-12-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-12.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-13" {
@@ -1627,13 +1550,12 @@ module "awn-dev-10-infra-13" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-13-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-13.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-14" {
@@ -1648,13 +1570,12 @@ module "awn-dev-10-infra-14" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-14-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-14.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-15" {
@@ -1669,13 +1590,12 @@ module "awn-dev-10-infra-15" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-15-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-15.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-16" {
@@ -1690,13 +1610,12 @@ module "awn-dev-10-infra-16" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-16-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-16.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-17" {
@@ -1711,13 +1630,12 @@ module "awn-dev-10-infra-17" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-17-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-17.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-18" {
@@ -1732,13 +1650,12 @@ module "awn-dev-10-infra-18" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-18-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-18.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-19" {
@@ -1753,13 +1670,12 @@ module "awn-dev-10-infra-19" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-19-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-19.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-20" {
@@ -1774,13 +1690,12 @@ module "awn-dev-10-infra-20" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-20-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-20.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-21" {
@@ -1795,13 +1710,12 @@ module "awn-dev-10-infra-21" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-21-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-21.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-22" {
@@ -1816,13 +1730,12 @@ module "awn-dev-10-infra-22" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-22-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-22.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-23" {
@@ -1837,13 +1750,12 @@ module "awn-dev-10-infra-23" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-23-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-23.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-24" {
@@ -1858,13 +1770,12 @@ module "awn-dev-10-infra-24" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-24-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-24.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-25" {
@@ -1879,13 +1790,12 @@ module "awn-dev-10-infra-25" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-25-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-25.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-26" {
@@ -1900,13 +1810,12 @@ module "awn-dev-10-infra-26" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-26-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-26.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-27" {
@@ -1921,13 +1830,12 @@ module "awn-dev-10-infra-27" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-27-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-27.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-28" {
@@ -1942,13 +1850,12 @@ module "awn-dev-10-infra-28" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-28-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-28.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-29" {
@@ -1963,13 +1870,12 @@ module "awn-dev-10-infra-29" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-29-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-29.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-30" {
@@ -1984,13 +1890,12 @@ module "awn-dev-10-infra-30" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-30-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-30.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-10-infra-31" {
@@ -2005,13 +1910,12 @@ module "awn-dev-10-infra-31" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-10-infra-31-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-10-infra-31.id
+  depends_on = [octopusdeploy_tag.awn-dev-10, octopusdeploy_tag.development]
 }
 
 module "awn-dev-11-infra-1" {
@@ -2026,13 +1930,12 @@ module "awn-dev-11-infra-1" {
   environment_tag = "Environment Types/Development"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-dev-11, octopusdeploy_tag.development]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.development.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-dev-11-infra-1-development-app-a" {
-  environments = [ data.octopusdeploy_environments.development.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-dev-11-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-dev-11, octopusdeploy_tag.development]
 }
 
 module "awn-prod-12-infra-1" {
@@ -2047,13 +1950,12 @@ module "awn-prod-12-infra-1" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-1-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-2" {
@@ -2068,13 +1970,12 @@ module "awn-prod-12-infra-2" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-2-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-2.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-3" {
@@ -2089,13 +1990,12 @@ module "awn-prod-12-infra-3" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-3-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-3.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-4" {
@@ -2110,13 +2010,12 @@ module "awn-prod-12-infra-4" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-4-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-4.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-5" {
@@ -2131,13 +2030,12 @@ module "awn-prod-12-infra-5" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-5-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-5.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-6" {
@@ -2152,13 +2050,12 @@ module "awn-prod-12-infra-6" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-6-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-6.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-7" {
@@ -2173,13 +2070,12 @@ module "awn-prod-12-infra-7" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-7-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-7.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-8" {
@@ -2194,13 +2090,12 @@ module "awn-prod-12-infra-8" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-8-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-8.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-9" {
@@ -2215,13 +2110,12 @@ module "awn-prod-12-infra-9" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-9-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-9.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-10" {
@@ -2236,13 +2130,12 @@ module "awn-prod-12-infra-10" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-10-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-10.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-11" {
@@ -2257,13 +2150,12 @@ module "awn-prod-12-infra-11" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-11-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-11.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-12" {
@@ -2278,13 +2170,12 @@ module "awn-prod-12-infra-12" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-12-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-12.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-13" {
@@ -2299,13 +2190,12 @@ module "awn-prod-12-infra-13" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-13-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-13.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-14" {
@@ -2320,13 +2210,12 @@ module "awn-prod-12-infra-14" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-14-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-14.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-15" {
@@ -2341,13 +2230,12 @@ module "awn-prod-12-infra-15" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-15-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-15.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-16" {
@@ -2362,13 +2250,12 @@ module "awn-prod-12-infra-16" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-16-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-16.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-17" {
@@ -2383,13 +2270,12 @@ module "awn-prod-12-infra-17" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-17-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-17.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-18" {
@@ -2404,13 +2290,12 @@ module "awn-prod-12-infra-18" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-18-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-18.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-19" {
@@ -2425,13 +2310,12 @@ module "awn-prod-12-infra-19" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-19-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-19.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-20" {
@@ -2446,13 +2330,12 @@ module "awn-prod-12-infra-20" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-20-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-20.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-21" {
@@ -2467,13 +2350,12 @@ module "awn-prod-12-infra-21" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-21-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-21.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-22" {
@@ -2488,13 +2370,12 @@ module "awn-prod-12-infra-22" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-22-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-22.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-23" {
@@ -2509,13 +2390,12 @@ module "awn-prod-12-infra-23" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-23-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-23.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-24" {
@@ -2530,13 +2410,12 @@ module "awn-prod-12-infra-24" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-24-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-24.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-25" {
@@ -2551,13 +2430,12 @@ module "awn-prod-12-infra-25" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-25-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-25.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-26" {
@@ -2572,13 +2450,12 @@ module "awn-prod-12-infra-26" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-26-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-26.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-27" {
@@ -2593,13 +2470,12 @@ module "awn-prod-12-infra-27" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-27-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-27.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-28" {
@@ -2614,13 +2490,12 @@ module "awn-prod-12-infra-28" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-28-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-28.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-29" {
@@ -2635,13 +2510,12 @@ module "awn-prod-12-infra-29" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-29-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-29.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-30" {
@@ -2656,13 +2530,12 @@ module "awn-prod-12-infra-30" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-30-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-30.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-31" {
@@ -2677,13 +2550,12 @@ module "awn-prod-12-infra-31" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-31-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-31.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-32" {
@@ -2698,13 +2570,12 @@ module "awn-prod-12-infra-32" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-32-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-32.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-33" {
@@ -2719,13 +2590,12 @@ module "awn-prod-12-infra-33" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-33-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-33.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-34" {
@@ -2740,13 +2610,12 @@ module "awn-prod-12-infra-34" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-34-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-34.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-35" {
@@ -2761,13 +2630,12 @@ module "awn-prod-12-infra-35" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-35-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-35.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-36" {
@@ -2782,13 +2650,12 @@ module "awn-prod-12-infra-36" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-36-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-36.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-37" {
@@ -2803,13 +2670,12 @@ module "awn-prod-12-infra-37" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-37-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-37.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-38" {
@@ -2824,13 +2690,12 @@ module "awn-prod-12-infra-38" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-38-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-38.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-39" {
@@ -2845,13 +2710,12 @@ module "awn-prod-12-infra-39" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-39-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-39.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-40" {
@@ -2866,13 +2730,12 @@ module "awn-prod-12-infra-40" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-40-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-40.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-41" {
@@ -2887,13 +2750,12 @@ module "awn-prod-12-infra-41" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-41-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-41.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-42" {
@@ -2908,13 +2770,12 @@ module "awn-prod-12-infra-42" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-42-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-42.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-43" {
@@ -2929,13 +2790,12 @@ module "awn-prod-12-infra-43" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-43-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-43.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-44" {
@@ -2950,13 +2810,12 @@ module "awn-prod-12-infra-44" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-44-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-44.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-45" {
@@ -2971,13 +2830,12 @@ module "awn-prod-12-infra-45" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-45-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-45.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-46" {
@@ -2992,13 +2850,12 @@ module "awn-prod-12-infra-46" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-46-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-46.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-47" {
@@ -3013,13 +2870,12 @@ module "awn-prod-12-infra-47" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-47-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-47.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-48" {
@@ -3034,13 +2890,12 @@ module "awn-prod-12-infra-48" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-48-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-48.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-49" {
@@ -3055,13 +2910,12 @@ module "awn-prod-12-infra-49" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-49-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-49.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-50" {
@@ -3076,13 +2930,12 @@ module "awn-prod-12-infra-50" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-50-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-50.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-12-infra-51" {
@@ -3097,13 +2950,12 @@ module "awn-prod-12-infra-51" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-12-infra-51-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-12-infra-51.id
+  depends_on = [octopusdeploy_tag.awn-prod-12, octopusdeploy_tag.production]
 }
 
 module "awn-prod-13-infra-1" {
@@ -3118,13 +2970,12 @@ module "awn-prod-13-infra-1" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-13, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-13-infra-1-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-13-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-prod-13, octopusdeploy_tag.production]
 }
 
 module "awn-prod-14-infra-1" {
@@ -3139,13 +2990,12 @@ module "awn-prod-14-infra-1" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-14-infra-1-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-14-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
 }
 
 module "awn-prod-14-infra-2" {
@@ -3160,13 +3010,12 @@ module "awn-prod-14-infra-2" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-14-infra-2-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-14-infra-2.id
+  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
 }
 
 module "awn-prod-14-infra-3" {
@@ -3181,13 +3030,12 @@ module "awn-prod-14-infra-3" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-14-infra-3-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-14-infra-3.id
+  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
 }
 
 module "awn-prod-14-infra-4" {
@@ -3202,13 +3050,12 @@ module "awn-prod-14-infra-4" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-14-infra-4-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-14-infra-4.id
+  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
 }
 
 module "awn-prod-14-infra-5" {
@@ -3223,13 +3070,12 @@ module "awn-prod-14-infra-5" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-14-infra-5-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-14-infra-5.id
+  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
 }
 
 module "awn-prod-14-infra-6" {
@@ -3244,13 +3090,12 @@ module "awn-prod-14-infra-6" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-14-infra-6-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-14-infra-6.id
+  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
 }
 
 module "awn-prod-14-infra-7" {
@@ -3265,13 +3110,12 @@ module "awn-prod-14-infra-7" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-14-infra-7-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-14-infra-7.id
+  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
 }
 
 module "awn-prod-14-infra-8" {
@@ -3286,13 +3130,12 @@ module "awn-prod-14-infra-8" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-14-infra-8-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-14-infra-8.id
+  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
 }
 
 module "awn-prod-14-infra-9" {
@@ -3307,13 +3150,12 @@ module "awn-prod-14-infra-9" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-14-infra-9-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-14-infra-9.id
+  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
 }
 
 module "awn-prod-14-infra-10" {
@@ -3328,13 +3170,12 @@ module "awn-prod-14-infra-10" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-14-infra-10-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-14-infra-10.id
+  depends_on = [octopusdeploy_tag.awn-prod-14, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-1" {
@@ -3349,13 +3190,12 @@ module "awn-prod-15-infra-1" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-1-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-2" {
@@ -3370,13 +3210,12 @@ module "awn-prod-15-infra-2" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-2-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-2.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-3" {
@@ -3391,13 +3230,12 @@ module "awn-prod-15-infra-3" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-3-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-3.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-4" {
@@ -3412,13 +3250,12 @@ module "awn-prod-15-infra-4" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-4-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-4.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-5" {
@@ -3433,13 +3270,12 @@ module "awn-prod-15-infra-5" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-5-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-5.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-6" {
@@ -3454,13 +3290,12 @@ module "awn-prod-15-infra-6" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-6-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-6.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-7" {
@@ -3475,13 +3310,12 @@ module "awn-prod-15-infra-7" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-7-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-7.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-8" {
@@ -3496,13 +3330,12 @@ module "awn-prod-15-infra-8" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-8-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-8.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-9" {
@@ -3517,13 +3350,12 @@ module "awn-prod-15-infra-9" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-9-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-9.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-10" {
@@ -3538,13 +3370,12 @@ module "awn-prod-15-infra-10" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-10-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-10.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-11" {
@@ -3559,13 +3390,12 @@ module "awn-prod-15-infra-11" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-11-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-11.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-12" {
@@ -3580,13 +3410,12 @@ module "awn-prod-15-infra-12" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-12-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-12.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-13" {
@@ -3601,13 +3430,12 @@ module "awn-prod-15-infra-13" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-13-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-13.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-14" {
@@ -3622,13 +3450,12 @@ module "awn-prod-15-infra-14" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-14-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-14.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-15" {
@@ -3643,13 +3470,12 @@ module "awn-prod-15-infra-15" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-15-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-15.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-16" {
@@ -3664,13 +3490,12 @@ module "awn-prod-15-infra-16" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-16-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-16.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-17" {
@@ -3685,13 +3510,12 @@ module "awn-prod-15-infra-17" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-17-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-17.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-18" {
@@ -3706,13 +3530,12 @@ module "awn-prod-15-infra-18" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-18-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-18.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-19" {
@@ -3727,13 +3550,12 @@ module "awn-prod-15-infra-19" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-19-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-19.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-20" {
@@ -3748,13 +3570,12 @@ module "awn-prod-15-infra-20" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-20-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-20.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-21" {
@@ -3769,13 +3590,12 @@ module "awn-prod-15-infra-21" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-21-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-21.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-22" {
@@ -3790,13 +3610,12 @@ module "awn-prod-15-infra-22" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-22-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-22.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-23" {
@@ -3811,13 +3630,12 @@ module "awn-prod-15-infra-23" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-23-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-23.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-24" {
@@ -3832,13 +3650,12 @@ module "awn-prod-15-infra-24" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-24-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-24.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-25" {
@@ -3853,13 +3670,12 @@ module "awn-prod-15-infra-25" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-25-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-25.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-26" {
@@ -3874,13 +3690,12 @@ module "awn-prod-15-infra-26" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-26-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-26.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-27" {
@@ -3895,13 +3710,12 @@ module "awn-prod-15-infra-27" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-27-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-27.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-28" {
@@ -3916,13 +3730,12 @@ module "awn-prod-15-infra-28" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-28-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-28.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-29" {
@@ -3937,13 +3750,12 @@ module "awn-prod-15-infra-29" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-29-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-29.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-30" {
@@ -3958,13 +3770,12 @@ module "awn-prod-15-infra-30" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-30-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-30.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-31" {
@@ -3979,13 +3790,12 @@ module "awn-prod-15-infra-31" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-31-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-31.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-32" {
@@ -4000,13 +3810,12 @@ module "awn-prod-15-infra-32" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-32-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-32.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-33" {
@@ -4021,13 +3830,12 @@ module "awn-prod-15-infra-33" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-33-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-33.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-34" {
@@ -4042,13 +3850,12 @@ module "awn-prod-15-infra-34" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-34-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-34.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-35" {
@@ -4063,13 +3870,12 @@ module "awn-prod-15-infra-35" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-35-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-35.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-36" {
@@ -4084,13 +3890,12 @@ module "awn-prod-15-infra-36" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-36-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-36.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-37" {
@@ -4105,13 +3910,12 @@ module "awn-prod-15-infra-37" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-37-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-37.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-38" {
@@ -4126,13 +3930,12 @@ module "awn-prod-15-infra-38" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-38-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-38.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-39" {
@@ -4147,13 +3950,12 @@ module "awn-prod-15-infra-39" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-39-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-39.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-40" {
@@ -4168,13 +3970,12 @@ module "awn-prod-15-infra-40" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-40-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-40.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-41" {
@@ -4189,13 +3990,12 @@ module "awn-prod-15-infra-41" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-41-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-41.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-15-infra-42" {
@@ -4210,13 +4010,12 @@ module "awn-prod-15-infra-42" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-15-infra-42-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-15-infra-42.id
+  depends_on = [octopusdeploy_tag.awn-prod-15, octopusdeploy_tag.production]
 }
 
 module "awn-prod-16-infra-1" {
@@ -4231,13 +4030,12 @@ module "awn-prod-16-infra-1" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-16, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-16-infra-1-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-16-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-prod-16, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-1" {
@@ -4252,13 +4050,12 @@ module "awn-prod-17-infra-1" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-1-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-2" {
@@ -4273,13 +4070,12 @@ module "awn-prod-17-infra-2" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-2-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-2.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-3" {
@@ -4294,13 +4090,12 @@ module "awn-prod-17-infra-3" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-3-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-3.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-4" {
@@ -4315,13 +4110,12 @@ module "awn-prod-17-infra-4" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-4-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-4.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-5" {
@@ -4336,13 +4130,12 @@ module "awn-prod-17-infra-5" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-5-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-5.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-6" {
@@ -4357,13 +4150,12 @@ module "awn-prod-17-infra-6" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-6-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-6.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-7" {
@@ -4378,13 +4170,12 @@ module "awn-prod-17-infra-7" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-7-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-7.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-8" {
@@ -4399,13 +4190,12 @@ module "awn-prod-17-infra-8" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-8-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-8.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-9" {
@@ -4420,13 +4210,12 @@ module "awn-prod-17-infra-9" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-9-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-9.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-10" {
@@ -4441,13 +4230,12 @@ module "awn-prod-17-infra-10" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-10-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-10.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-11" {
@@ -4462,13 +4250,12 @@ module "awn-prod-17-infra-11" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-11-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-11.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-12" {
@@ -4483,13 +4270,12 @@ module "awn-prod-17-infra-12" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-12-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-12.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-13" {
@@ -4504,13 +4290,12 @@ module "awn-prod-17-infra-13" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-13-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-13.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-14" {
@@ -4525,13 +4310,12 @@ module "awn-prod-17-infra-14" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-14-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-14.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-15" {
@@ -4546,13 +4330,12 @@ module "awn-prod-17-infra-15" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-15-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-15.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-16" {
@@ -4567,13 +4350,12 @@ module "awn-prod-17-infra-16" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-16-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-16.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-17" {
@@ -4588,13 +4370,12 @@ module "awn-prod-17-infra-17" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-17-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-17.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-18" {
@@ -4609,13 +4390,12 @@ module "awn-prod-17-infra-18" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-18-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-18.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-19" {
@@ -4630,13 +4410,12 @@ module "awn-prod-17-infra-19" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-19-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-19.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-20" {
@@ -4651,13 +4430,12 @@ module "awn-prod-17-infra-20" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-20-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-20.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-21" {
@@ -4672,13 +4450,12 @@ module "awn-prod-17-infra-21" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-21-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-21.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-22" {
@@ -4693,13 +4470,12 @@ module "awn-prod-17-infra-22" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-22-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-22.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-23" {
@@ -4714,13 +4490,12 @@ module "awn-prod-17-infra-23" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-23-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-23.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-24" {
@@ -4735,13 +4510,12 @@ module "awn-prod-17-infra-24" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-24-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-24.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-25" {
@@ -4756,13 +4530,12 @@ module "awn-prod-17-infra-25" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-25-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-25.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-26" {
@@ -4777,13 +4550,12 @@ module "awn-prod-17-infra-26" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-26-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-26.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-27" {
@@ -4798,13 +4570,12 @@ module "awn-prod-17-infra-27" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-27-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-27.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-28" {
@@ -4819,13 +4590,12 @@ module "awn-prod-17-infra-28" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-28-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-28.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-29" {
@@ -4840,13 +4610,12 @@ module "awn-prod-17-infra-29" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-29-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-29.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-30" {
@@ -4861,13 +4630,12 @@ module "awn-prod-17-infra-30" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-30-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-30.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-31" {
@@ -4882,13 +4650,12 @@ module "awn-prod-17-infra-31" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-31-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-31.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-32" {
@@ -4903,13 +4670,12 @@ module "awn-prod-17-infra-32" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-32-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-32.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-33" {
@@ -4924,13 +4690,12 @@ module "awn-prod-17-infra-33" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-33-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-33.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-34" {
@@ -4945,13 +4710,12 @@ module "awn-prod-17-infra-34" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-34-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-34.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-35" {
@@ -4966,13 +4730,12 @@ module "awn-prod-17-infra-35" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-35-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-35.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-36" {
@@ -4987,13 +4750,12 @@ module "awn-prod-17-infra-36" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-36-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-36.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-37" {
@@ -5008,13 +4770,12 @@ module "awn-prod-17-infra-37" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-37-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-37.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-38" {
@@ -5029,13 +4790,12 @@ module "awn-prod-17-infra-38" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-38-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-38.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-39" {
@@ -5050,13 +4810,12 @@ module "awn-prod-17-infra-39" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-39-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-39.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-40" {
@@ -5071,13 +4830,12 @@ module "awn-prod-17-infra-40" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-40-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-40.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-41" {
@@ -5092,13 +4850,12 @@ module "awn-prod-17-infra-41" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-41-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-41.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-17-infra-42" {
@@ -5113,13 +4870,12 @@ module "awn-prod-17-infra-42" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-17-infra-42-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-17-infra-42.id
+  depends_on = [octopusdeploy_tag.awn-prod-17, octopusdeploy_tag.production]
 }
 
 module "awn-prod-18-infra-1" {
@@ -5134,13 +4890,12 @@ module "awn-prod-18-infra-1" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-18, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-18-infra-1-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-18-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-prod-18, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-1" {
@@ -5155,13 +4910,12 @@ module "awn-prod-19-infra-1" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-1-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-2" {
@@ -5176,13 +4930,12 @@ module "awn-prod-19-infra-2" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-2-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-2.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-3" {
@@ -5197,13 +4950,12 @@ module "awn-prod-19-infra-3" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-3-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-3.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-4" {
@@ -5218,13 +4970,12 @@ module "awn-prod-19-infra-4" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-4-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-4.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-5" {
@@ -5239,13 +4990,12 @@ module "awn-prod-19-infra-5" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-5-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-5.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-6" {
@@ -5260,13 +5010,12 @@ module "awn-prod-19-infra-6" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-6-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-6.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-7" {
@@ -5281,13 +5030,12 @@ module "awn-prod-19-infra-7" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-7-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-7.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-8" {
@@ -5302,13 +5050,12 @@ module "awn-prod-19-infra-8" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-8-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-8.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-9" {
@@ -5323,13 +5070,12 @@ module "awn-prod-19-infra-9" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-9-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-9.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-10" {
@@ -5344,13 +5090,12 @@ module "awn-prod-19-infra-10" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-10-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-10.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-11" {
@@ -5365,13 +5110,12 @@ module "awn-prod-19-infra-11" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-11-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-11.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-12" {
@@ -5386,13 +5130,12 @@ module "awn-prod-19-infra-12" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-12-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-12.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-13" {
@@ -5407,13 +5150,12 @@ module "awn-prod-19-infra-13" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-13-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-13.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-14" {
@@ -5428,13 +5170,12 @@ module "awn-prod-19-infra-14" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-14-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-14.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-15" {
@@ -5449,13 +5190,12 @@ module "awn-prod-19-infra-15" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-15-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-15.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-16" {
@@ -5470,13 +5210,12 @@ module "awn-prod-19-infra-16" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-16-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-16.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-17" {
@@ -5491,13 +5230,12 @@ module "awn-prod-19-infra-17" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-17-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-17.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-18" {
@@ -5512,13 +5250,12 @@ module "awn-prod-19-infra-18" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-18-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-18.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-19" {
@@ -5533,13 +5270,12 @@ module "awn-prod-19-infra-19" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-19-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-19.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-20" {
@@ -5554,13 +5290,12 @@ module "awn-prod-19-infra-20" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-20-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-20.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-21" {
@@ -5575,13 +5310,12 @@ module "awn-prod-19-infra-21" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-21-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-21.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-22" {
@@ -5596,13 +5330,12 @@ module "awn-prod-19-infra-22" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-22-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-22.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-23" {
@@ -5617,13 +5350,12 @@ module "awn-prod-19-infra-23" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-23-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-23.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-24" {
@@ -5638,13 +5370,12 @@ module "awn-prod-19-infra-24" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-24-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-24.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-25" {
@@ -5659,13 +5390,12 @@ module "awn-prod-19-infra-25" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-25-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-25.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-26" {
@@ -5680,13 +5410,12 @@ module "awn-prod-19-infra-26" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-26-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-26.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-27" {
@@ -5701,13 +5430,12 @@ module "awn-prod-19-infra-27" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-27-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-27.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-28" {
@@ -5722,13 +5450,12 @@ module "awn-prod-19-infra-28" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-28-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-28.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-29" {
@@ -5743,13 +5470,12 @@ module "awn-prod-19-infra-29" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-29-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-29.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-30" {
@@ -5764,13 +5490,12 @@ module "awn-prod-19-infra-30" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-30-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-30.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-31" {
@@ -5785,13 +5510,12 @@ module "awn-prod-19-infra-31" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-31-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-31.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-32" {
@@ -5806,13 +5530,12 @@ module "awn-prod-19-infra-32" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-32-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-32.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-33" {
@@ -5827,13 +5550,12 @@ module "awn-prod-19-infra-33" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-33-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-33.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-34" {
@@ -5848,13 +5570,12 @@ module "awn-prod-19-infra-34" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-34-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-34.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-35" {
@@ -5869,13 +5590,12 @@ module "awn-prod-19-infra-35" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-35-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-35.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-36" {
@@ -5890,13 +5610,12 @@ module "awn-prod-19-infra-36" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-36-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-36.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-37" {
@@ -5911,13 +5630,12 @@ module "awn-prod-19-infra-37" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-37-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-37.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-38" {
@@ -5932,13 +5650,12 @@ module "awn-prod-19-infra-38" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-38-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-38.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-39" {
@@ -5953,13 +5670,12 @@ module "awn-prod-19-infra-39" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-39-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-39.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-40" {
@@ -5974,13 +5690,12 @@ module "awn-prod-19-infra-40" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-40-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-40.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-41" {
@@ -5995,13 +5710,12 @@ module "awn-prod-19-infra-41" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-41-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-41.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-19-infra-42" {
@@ -6016,13 +5730,12 @@ module "awn-prod-19-infra-42" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-19-infra-42-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-19-infra-42.id
+  depends_on = [octopusdeploy_tag.awn-prod-19, octopusdeploy_tag.production]
 }
 
 module "awn-prod-20-infra-1" {
@@ -6037,13 +5750,12 @@ module "awn-prod-20-infra-1" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-20, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-20-infra-1-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-20-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-prod-20, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-1" {
@@ -6058,13 +5770,12 @@ module "awn-prod-21-infra-1" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-1-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-2" {
@@ -6079,13 +5790,12 @@ module "awn-prod-21-infra-2" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-2-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-2.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-3" {
@@ -6100,13 +5810,12 @@ module "awn-prod-21-infra-3" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-3-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-3.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-4" {
@@ -6121,13 +5830,12 @@ module "awn-prod-21-infra-4" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-4-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-4.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-5" {
@@ -6142,13 +5850,12 @@ module "awn-prod-21-infra-5" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-5-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-5.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-6" {
@@ -6163,13 +5870,12 @@ module "awn-prod-21-infra-6" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-6-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-6.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-7" {
@@ -6184,13 +5890,12 @@ module "awn-prod-21-infra-7" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-7-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-7.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-8" {
@@ -6205,13 +5910,12 @@ module "awn-prod-21-infra-8" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-8-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-8.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-9" {
@@ -6226,13 +5930,12 @@ module "awn-prod-21-infra-9" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-9-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-9.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-10" {
@@ -6247,13 +5950,12 @@ module "awn-prod-21-infra-10" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-10-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-10.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-11" {
@@ -6268,13 +5970,12 @@ module "awn-prod-21-infra-11" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-11-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-11.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-12" {
@@ -6289,13 +5990,12 @@ module "awn-prod-21-infra-12" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-12-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-12.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-13" {
@@ -6310,13 +6010,12 @@ module "awn-prod-21-infra-13" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-13-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-13.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-14" {
@@ -6331,13 +6030,12 @@ module "awn-prod-21-infra-14" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-14-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-14.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-15" {
@@ -6352,13 +6050,12 @@ module "awn-prod-21-infra-15" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-15-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-15.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-16" {
@@ -6373,13 +6070,12 @@ module "awn-prod-21-infra-16" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-16-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-16.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-17" {
@@ -6394,13 +6090,12 @@ module "awn-prod-21-infra-17" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-17-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-17.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-18" {
@@ -6415,13 +6110,12 @@ module "awn-prod-21-infra-18" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-18-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-18.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-19" {
@@ -6436,13 +6130,12 @@ module "awn-prod-21-infra-19" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-19-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-19.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-20" {
@@ -6457,13 +6150,12 @@ module "awn-prod-21-infra-20" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-20-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-20.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-21" {
@@ -6478,13 +6170,12 @@ module "awn-prod-21-infra-21" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-21-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-21.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-22" {
@@ -6499,13 +6190,12 @@ module "awn-prod-21-infra-22" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-22-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-22.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-23" {
@@ -6520,13 +6210,12 @@ module "awn-prod-21-infra-23" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-23-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-23.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-24" {
@@ -6541,13 +6230,12 @@ module "awn-prod-21-infra-24" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-24-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-24.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-25" {
@@ -6562,13 +6250,12 @@ module "awn-prod-21-infra-25" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-25-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-25.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-26" {
@@ -6583,13 +6270,12 @@ module "awn-prod-21-infra-26" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-26-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-26.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-27" {
@@ -6604,13 +6290,12 @@ module "awn-prod-21-infra-27" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-27-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-27.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-28" {
@@ -6625,13 +6310,12 @@ module "awn-prod-21-infra-28" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-28-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-28.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-29" {
@@ -6646,13 +6330,12 @@ module "awn-prod-21-infra-29" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-29-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-29.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-30" {
@@ -6667,13 +6350,12 @@ module "awn-prod-21-infra-30" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-30-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-30.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-31" {
@@ -6688,13 +6370,12 @@ module "awn-prod-21-infra-31" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-31-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-31.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-32" {
@@ -6709,13 +6390,12 @@ module "awn-prod-21-infra-32" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-32-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-32.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-33" {
@@ -6730,13 +6410,12 @@ module "awn-prod-21-infra-33" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-33-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-33.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-34" {
@@ -6751,13 +6430,12 @@ module "awn-prod-21-infra-34" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-34-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-34.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-35" {
@@ -6772,13 +6450,12 @@ module "awn-prod-21-infra-35" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-35-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-35.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-36" {
@@ -6793,13 +6470,12 @@ module "awn-prod-21-infra-36" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-36-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-36.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-37" {
@@ -6814,13 +6490,12 @@ module "awn-prod-21-infra-37" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-37-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-37.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-38" {
@@ -6835,13 +6510,12 @@ module "awn-prod-21-infra-38" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-38-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-38.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-39" {
@@ -6856,13 +6530,12 @@ module "awn-prod-21-infra-39" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-39-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-39.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-40" {
@@ -6877,13 +6550,12 @@ module "awn-prod-21-infra-40" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-40-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-40.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-41" {
@@ -6898,13 +6570,12 @@ module "awn-prod-21-infra-41" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-41-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-41.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-42" {
@@ -6919,13 +6590,12 @@ module "awn-prod-21-infra-42" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-42-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-42.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-43" {
@@ -6940,13 +6610,12 @@ module "awn-prod-21-infra-43" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-43-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-43.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-21-infra-44" {
@@ -6961,13 +6630,12 @@ module "awn-prod-21-infra-44" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-21-infra-44-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-21-infra-44.id
+  depends_on = [octopusdeploy_tag.awn-prod-21, octopusdeploy_tag.production]
 }
 
 module "awn-prod-22-infra-1" {
@@ -6982,13 +6650,12 @@ module "awn-prod-22-infra-1" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-prod-22, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-22-infra-1-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-22-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-prod-22, octopusdeploy_tag.production]
 }
 
 module "awn-prod-23-infra-1" {
@@ -7003,13 +6670,12 @@ module "awn-prod-23-infra-1" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-23, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-23-infra-1-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-23-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-prod-23, octopusdeploy_tag.production]
 }
 
 module "awn-prod-24-infra-1" {
@@ -7024,13 +6690,12 @@ module "awn-prod-24-infra-1" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-24, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-24-infra-1-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-24-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-prod-24, octopusdeploy_tag.production]
 }
 
 module "awn-prod-24-infra-2" {
@@ -7045,13 +6710,12 @@ module "awn-prod-24-infra-2" {
   environment_tag = "Environment Types/Production"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-prod-24, octopusdeploy_tag.production]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.production.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-prod-24-infra-2-production-app-a" {
-  environments = [ data.octopusdeploy_environments.production.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-prod-24-infra-2.id
+  depends_on = [octopusdeploy_tag.awn-prod-24, octopusdeploy_tag.production]
 }
 
 module "awn-test-25-infra-1" {
@@ -7066,13 +6730,12 @@ module "awn-test-25-infra-1" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-1-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-2" {
@@ -7087,13 +6750,12 @@ module "awn-test-25-infra-2" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-2-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-2.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-3" {
@@ -7108,13 +6770,12 @@ module "awn-test-25-infra-3" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-3-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-3.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-4" {
@@ -7129,13 +6790,12 @@ module "awn-test-25-infra-4" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-4-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-4.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-5" {
@@ -7150,13 +6810,12 @@ module "awn-test-25-infra-5" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-5-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-5.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-6" {
@@ -7171,13 +6830,12 @@ module "awn-test-25-infra-6" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-6-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-6.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-7" {
@@ -7192,13 +6850,12 @@ module "awn-test-25-infra-7" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-7-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-7.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-8" {
@@ -7213,13 +6870,12 @@ module "awn-test-25-infra-8" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-8-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-8.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-9" {
@@ -7234,13 +6890,12 @@ module "awn-test-25-infra-9" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-9-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-9.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-10" {
@@ -7255,13 +6910,12 @@ module "awn-test-25-infra-10" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-10-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-10.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-11" {
@@ -7276,13 +6930,12 @@ module "awn-test-25-infra-11" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-11-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-11.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-12" {
@@ -7297,13 +6950,12 @@ module "awn-test-25-infra-12" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-12-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-12.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-13" {
@@ -7318,13 +6970,12 @@ module "awn-test-25-infra-13" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-13-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-13.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-14" {
@@ -7339,13 +6990,12 @@ module "awn-test-25-infra-14" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-14-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-14.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-15" {
@@ -7360,13 +7010,12 @@ module "awn-test-25-infra-15" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-15-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-15.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-16" {
@@ -7381,13 +7030,12 @@ module "awn-test-25-infra-16" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-16-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-16.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-17" {
@@ -7402,13 +7050,12 @@ module "awn-test-25-infra-17" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-17-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-17.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-18" {
@@ -7423,13 +7070,12 @@ module "awn-test-25-infra-18" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-18-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-18.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-19" {
@@ -7444,13 +7090,12 @@ module "awn-test-25-infra-19" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-19-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-19.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-20" {
@@ -7465,13 +7110,12 @@ module "awn-test-25-infra-20" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-20-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-20.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-21" {
@@ -7486,13 +7130,12 @@ module "awn-test-25-infra-21" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-21-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-21.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-22" {
@@ -7507,13 +7150,12 @@ module "awn-test-25-infra-22" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-22-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-22.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-23" {
@@ -7528,13 +7170,12 @@ module "awn-test-25-infra-23" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-23-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-23.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-24" {
@@ -7549,13 +7190,12 @@ module "awn-test-25-infra-24" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-24-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-24.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-25" {
@@ -7570,13 +7210,12 @@ module "awn-test-25-infra-25" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-25-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-25.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-26" {
@@ -7591,13 +7230,12 @@ module "awn-test-25-infra-26" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-26-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-26.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-27" {
@@ -7612,13 +7250,12 @@ module "awn-test-25-infra-27" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-27-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-27.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-28" {
@@ -7633,13 +7270,12 @@ module "awn-test-25-infra-28" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-28-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-28.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-29" {
@@ -7654,13 +7290,12 @@ module "awn-test-25-infra-29" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-29-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-29.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-30" {
@@ -7675,13 +7310,12 @@ module "awn-test-25-infra-30" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-30-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-30.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-31" {
@@ -7696,13 +7330,12 @@ module "awn-test-25-infra-31" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-31-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-31.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-32" {
@@ -7717,13 +7350,12 @@ module "awn-test-25-infra-32" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-32-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-32.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-33" {
@@ -7738,13 +7370,12 @@ module "awn-test-25-infra-33" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-33-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-33.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-34" {
@@ -7759,13 +7390,12 @@ module "awn-test-25-infra-34" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-34-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-34.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-35" {
@@ -7780,13 +7410,12 @@ module "awn-test-25-infra-35" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-35-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-35.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-36" {
@@ -7801,13 +7430,12 @@ module "awn-test-25-infra-36" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-36-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-36.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-37" {
@@ -7822,13 +7450,12 @@ module "awn-test-25-infra-37" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-37-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-37.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-38" {
@@ -7843,13 +7470,12 @@ module "awn-test-25-infra-38" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-38-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-38.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-39" {
@@ -7864,13 +7490,12 @@ module "awn-test-25-infra-39" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-39-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-39.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-40" {
@@ -7885,13 +7510,12 @@ module "awn-test-25-infra-40" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-40-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-40.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-41" {
@@ -7906,13 +7530,12 @@ module "awn-test-25-infra-41" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-41-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-41.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-42" {
@@ -7927,13 +7550,12 @@ module "awn-test-25-infra-42" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-42-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-42.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-25-infra-43" {
@@ -7948,13 +7570,12 @@ module "awn-test-25-infra-43" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-25-infra-43-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-25-infra-43.id
+  depends_on = [octopusdeploy_tag.awn-test-25, octopusdeploy_tag.test]
 }
 
 module "awn-test-26-infra-1" {
@@ -7969,13 +7590,12 @@ module "awn-test-26-infra-1" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-26, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-26-infra-1-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-26-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-test-26, octopusdeploy_tag.test]
 }
 
 module "awn-test-27-infra-1" {
@@ -7990,13 +7610,12 @@ module "awn-test-27-infra-1" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-27, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-27-infra-1-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-27-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-test-27, octopusdeploy_tag.test]
 }
 
 module "awn-test-28-infra-1" {
@@ -8011,13 +7630,12 @@ module "awn-test-28-infra-1" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-28, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-28-infra-1-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-28-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-test-28, octopusdeploy_tag.test]
 }
 
 module "awn-test-28-infra-2" {
@@ -8032,13 +7650,12 @@ module "awn-test-28-infra-2" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-28, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-28-infra-2-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-28-infra-2.id
+  depends_on = [octopusdeploy_tag.awn-test-28, octopusdeploy_tag.test]
 }
 
 module "awn-test-28-infra-3" {
@@ -8053,13 +7670,12 @@ module "awn-test-28-infra-3" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-28, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-28-infra-3-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-28-infra-3.id
+  depends_on = [octopusdeploy_tag.awn-test-28, octopusdeploy_tag.test]
 }
 
 module "awn-test-28-infra-4" {
@@ -8074,13 +7690,12 @@ module "awn-test-28-infra-4" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-test-28, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-28-infra-4-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-28-infra-4.id
+  depends_on = [octopusdeploy_tag.awn-test-28, octopusdeploy_tag.test]
 }
 
 module "awn-test-28-infra-5" {
@@ -8095,13 +7710,12 @@ module "awn-test-28-infra-5" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-28, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-28-infra-5-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-28-infra-5.id
+  depends_on = [octopusdeploy_tag.awn-test-28, octopusdeploy_tag.test]
 }
 
 module "awn-test-28-infra-6" {
@@ -8116,13 +7730,12 @@ module "awn-test-28-infra-6" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Beta"
 
-  depends_on = [octopusdeploy_tag.awn-test-28, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-28-infra-6-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-28-infra-6.id
+  depends_on = [octopusdeploy_tag.awn-test-28, octopusdeploy_tag.test]
 }
 
 module "awn-test-28-infra-7" {
@@ -8137,13 +7750,12 @@ module "awn-test-28-infra-7" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-28, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-28-infra-7-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-28-infra-7.id
+  depends_on = [octopusdeploy_tag.awn-test-28, octopusdeploy_tag.test]
 }
 
 module "awn-test-29-infra-1" {
@@ -8158,13 +7770,12 @@ module "awn-test-29-infra-1" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-29, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-29-infra-1-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-29-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-test-29, octopusdeploy_tag.test]
 }
 
 module "awn-test-30-infra-1" {
@@ -8179,13 +7790,12 @@ module "awn-test-30-infra-1" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Stable"
 
-  depends_on = [octopusdeploy_tag.awn-test-30, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-30-infra-1-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-30-infra-1.id
+  depends_on = [octopusdeploy_tag.awn-test-30, octopusdeploy_tag.test]
 }
 
 module "awn-test-30-infra-2" {
@@ -8200,12 +7810,11 @@ module "awn-test-30-infra-2" {
   environment_tag = "Environment Types/Test"
   release_ring_tag = "Release Ring/Alpha"
 
-  depends_on = [octopusdeploy_tag.awn-test-30, octopusdeploy_tag.test]
-}
+  project_environments = [{
+    project_id = data.octopusdeploy_projects.app_a.projects[0].id
+    environments = [data.octopusdeploy_environments.test.environments[0].id]
+  }]
 
-resource "octopusdeploy_tenant_project" "awn-test-30-infra-2-test-app-a" {
-  environments = [ data.octopusdeploy_environments.test.environments[0].id ]
-  project_id   = data.octopusdeploy_projects.app_a.projects[0].id
-  tenant_id    = octopusdeploy_tenant.awn-test-30-infra-2.id
+  depends_on = [octopusdeploy_tag.awn-test-30, octopusdeploy_tag.test]
 }
 
