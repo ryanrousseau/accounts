@@ -7,7 +7,7 @@ terraform {
 }
 
 resource "octopusdeploy_kubernetes_cluster_deployment_target" "cluster" {
-  cluster_url                       = var.cluster_url
+  cluster_url                       = "temp"
   environments                      = [ var.environment_id ]
   name                              = var.cluster_name
   roles                             = ["app-cluster"]
@@ -15,7 +15,9 @@ resource "octopusdeploy_kubernetes_cluster_deployment_target" "cluster" {
   tenants                           = [ var.tenant_id ]
   health_status                     = "Healthy"
 
-  authentication {
+  azure_service_principal_authentication {
     account_id = var.auth_account_id
+    cluster_name = "wrg-development-4dxzq"
+    cluster_resource_group = "demo.octopus.app"
   }
 }

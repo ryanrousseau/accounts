@@ -26,11 +26,12 @@ resource "octopusdeploy_project" "app" {
     skip_machine_behavior           = "SkipUnavailableMachines"
   }
 
-  git_library_persistence_settings {
-    git_credential_id = var.git_credential_id
-    url = var.git_url
-    default_branch = "main"
-  }
+  # git_library_persistence_settings {
+  #   git_credential_id = var.git_credential_id
+  #   url = var.git_url
+  #   default_branch = "main"
+  #   base_path = ".octopus/"
+  # }
 
   dynamic "template" {
     for_each = var.templates
